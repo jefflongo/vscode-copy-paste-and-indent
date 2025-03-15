@@ -22,6 +22,7 @@
   ],
   "activationEvents": [
     "onCommand:copy-paste-and-indent.copy",
+    "onCommand:copy-paste-and-indent.cut",
     "onCommand:copy-paste-and-indent.paste"
   ],
   "main": "./out/extension.js",
@@ -33,6 +34,12 @@
         "key": "ctrl+c",
         "mac": "cmd+c",
         "when": "editorTextFocus"
+      },
+      {
+        "command": "copy-paste-and-indent.cut",
+        "key": "ctrl+x",
+        "mac": "cmd+x",
+        "when": "editorTextFocus && !editorReadonly"
       },
       {
         "command": "copy-paste-and-indent.paste",
